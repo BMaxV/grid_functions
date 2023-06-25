@@ -22,6 +22,22 @@ class GridHandler:
                 yc+=1
             xc+=1
 
+def get_three_by_three_environment(x_y_cell_key,diff):
+    x,y=x_y_cell_key
+    l=[
+    (x+diff,y),
+    (x+diff,y+diff),
+    (x+diff,y-diff),
+    #(x,y),
+    (x,y+diff),
+    (x,y-diff),
+    (x-diff,y),
+    (x-diff,y+diff),
+    (x-diff,y-diff),
+    ]
+    return l
+    
+    
 
 def threebythree_y_flip(my_dict):
     new_dict = {}
